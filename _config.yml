@@ -30,6 +30,15 @@ production_url : http://username.github.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
+
+navigation:
+- text: The Game
+  url: /game/index.html
+- text: The Rules
+  url: /rules/index.html
+- text: About
+  url: /about/index.html
+
 JB :
   version : 0.2.13
 

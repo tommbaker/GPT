@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 ---
 {% include JB/setup %}
 
 Rules of the Game
 =================
 
-This is a trading game (not real money) in which you can buy and sell 'shares' in a driver. Payouts are given for each share you have in a driver that meets the conditions below (overtaking or being in the lead).
+This is a trading game in which you can buy and sell 'shares' in a driver. Payouts are given for each share you have in a driver that meets the conditions below (overtaking or being in the lead).
 
 Payouts are awarded in as close to real-time as possible based on live events happening at the race.
 
@@ -21,7 +21,7 @@ Payouts
 
 * $200 per share will be paid for each lap a driver leads.
 
-* [Share prices will vary between $100 - $200]
+* Share prices will vary between $100 - $200
 
 Conditions
 ----------
