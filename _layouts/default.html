@@ -42,7 +42,7 @@ body { padding-top: 55px; /* 60px to make the container go all the way to the bo
                             {% endif %}
 
                             <li class="{{ current }}">
-                                <a href="{{ link.url | replace:'index.html','' }}">{{ link.text }}</a>
+                                <a href="{{ BASE_PATH }}{{ link.url | replace:'index.html','' }}">{{ link.text }}</a>
                             </li>
                             {% endfor %}
                         </ul>
