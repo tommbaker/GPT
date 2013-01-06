@@ -3,7 +3,7 @@
 
 html, body { color: #211D40; font-family: 'Yanone Kaffeesatz', san-serif; background-color: #211D40; }
 .non-footer { background-color: white;}
-p { font-family: 'Droid Sans', sans-serif;}
+p, td, th { font-family: 'Droid Sans', sans-serif;}
 
 .content { padding: 20px; }
 
@@ -26,6 +26,10 @@ footer .disclaimer { line-height: 11px; margin-top: 10px;text-transform: none;}
 .navbar .nav .active a:hover { color: #211D40; background-color: #211D40;}
 .navbar .btn { margin-top: 10px; }
 */
+
+
+table.stocks { width: 100%;}
+table.stocks td, table.stocks th { text-align: left; padding: 5px 0;}
 
 /* Large desktop */
 @media (min-width: 1200px) {
