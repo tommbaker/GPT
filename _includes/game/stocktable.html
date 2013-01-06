@@ -1,3 +1,4 @@
+{% raw %}
 <div ng-controller="TheGame">
 	<h1>The Game</h1>
 	<table class="stocks">
@@ -13,9 +14,10 @@
 			<td>{{ stock.quantity }}</td>
 			<td>{{ stock.shares }}</td>
 			<td>
-				<a href="#" class="btn btn-success" onmousedown="buyShares('{{ stock.code }}'); console.log('Buy Requested');" onclick="return false;">Buy</a>
-				<a href="#" class="btn btn-danger" onmousedown="sellShares('{{ stock.code }}');" onclick="return false;">Sell</a>
+				<a href="#" class="btn btn-success" onmousedown="console.log('Buy Requested'); buyShares('{{ stock.code }}');" onclick="return false;">Buy</a>
+				<a href="#" class="btn btn-danger" onmousedown="console.log('Sell Requested');sellShares('{{ stock.code }}');" onclick="return false;">Sell</a>
 			</td>
 		</tr>
 	</table>
 </div>
+{% endraw %}

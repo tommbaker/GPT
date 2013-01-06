@@ -1,40 +1,37 @@
 var socket;
-var shares = [];
+var portfolio = [];
 
 $(function() {
 
-	socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
+	socket = io.connect('http://http://shrouded-escarpment-7034.herokuapp.com:80/');
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
 		updateUI();
 	});
 
-	socket.on('confirmTrade', function(data) {
-		var share = _.find(shares, function(share) {
-			return share.code == data.code;
-		});
-		if(!share) {
-			shares.push({
-				code: data.code,
-				amount: data.amount
-			});
-		} else {
-			share.amount += data.amount;
-		}
+	socket.on('updateUser', function(user) {
+		portfolio = user.portfolio;
+
 		updateUI();
+	});
+
+	socket.emit('tradeShares', {
+		userId: 'tom',
+		stockCode: 'HAM',
+		amount: 0
 	});
 
 });
 
 function updateUI() {
 	_.each(rootScope.stocks, function(stock) {
-		var share = _.find(shares, function(share) {
-			return share.code == stock.code;
+		var shares = _.find(portfolio, function(s) {
+			return s.code == stock.code;
 		});
-		if(!share) {
+		if(!shares) {
 			stock.shares = 0;
 		} else {
-			stock.shares = share.amount;
+			stock.shares = shares.quantity;
 		}
 	});
 	rootScope.$apply();
@@ -43,15 +40,18 @@ function updateUI() {
 var buyShares = _.throttle(function(code) {
 	console.log("Buy Executed");
 	var data = {
-		code: code,
+		userId: 'tom',
+		stockCode: code,
 		amount: 10
 	};
 	socket.emit('tradeShares', data);
 }, 500);
 
 var sellShares = _.throttle(function(code) {
+	console.log("Sell Executed");
 	var data = {
-		code: code,
+		userId: 'tom',
+		stockCode: code,
 		amount: -10
 	};
 	socket.emit('tradeShares', data);
