@@ -5,24 +5,4 @@ remoteScripts: ["http://shrouded-escarpment-7034.herokuapp.com/socket.io/socket.
 ---
 {% include JB/setup %}
 
-<div ng-controller="TheGame">
-	<h1>The Game</h1>
-	<table class="stocks">
-		<tr>
-			<th>Driver</th>
-			<th>Price</th>
-			<th>Shares Issued</th>
-			<th>Your Shares</th>
-		</tr>
-		<tr ng-repeat="stock in stocks">
-			<td>{{ '{{ stock.code ' }}}}</td>
-			<td>${{ '{{ stock.price ' }}}}</td>
-			<td>{{ '{{ stock.quantity ' }}}}</td>
-			<td>{{ '{{ stock.shares ' }}}}</td>
-			<td>
-				<a href="#" class="btn btn-success" onmousedown="buyShares('{{ '{{ stock.code ' }}}}'); console.log('Buy Requested');" onclick="return false;">Buy</a>
-				<a href="#" class="btn btn-danger" onmousedown="sellShares('{{ '{{ stock.code ' }}}}');" onclick="return false;">Sell</a>
-			</td>
-		</tr>
-	</table>
-</div>
+{% include stocktable.html %}
