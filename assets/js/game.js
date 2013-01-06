@@ -3,7 +3,7 @@ var portfolio = [];
 
 $(function() {
 
-	socket = io.connect('http://http://shrouded-escarpment-7034.herokuapp.com:80/');
+	socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
 		updateUI();
