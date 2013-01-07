@@ -35,3 +35,5 @@ SFL = Start/Finish Line
 	I.E. Prost crosses the SFL in #4 place and Senna in #5 place. During the lap Senna overtakes Prost and crosses the SFL ahead. To receive a payout for the position that was gained, shares in Senna must have been held when he previously crossed the SFL when he was behind Prost.
 
 * When the lead driver crosses the SFL for the final time, trading will cease and you will receive market value for all the shares you hold. Any trading that occurs between the driver crossing the line and the system being updated will be reversed.
+
+* Each trade will include .5% commision.

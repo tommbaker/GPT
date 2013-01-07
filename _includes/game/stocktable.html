@@ -1,16 +1,15 @@
 <div ng-controller="TheGame">
 	<h1>The Game</h1>
+	<p><strong>Balance:</strong> {{ '{{ balance ' }}}}</p>
 	<table class="stocks">
 		<tr>
 			<th>Driver</th>
 			<th>Price</th>
-			<th>Shares Issued</th>
 			<th>Your Shares</th>
 		</tr>
 		<tr ng-repeat="stock in stocks">
 			<td>{{ '{{ stock.code ' }}}}</td>
 			<td>${{ '{{ stock.price ' }}}}</td>
-			<td>{{ '{{ stock.quantity ' }}}}</td>
 			<td>{{ '{{ stock.shares ' }}}}</td>
 			<td>
 				<a href="#" class="btn btn-success" onmousedown="console.log('Buy Requested'); buyShares('{{ '{{ stock.code ' }}}}');" onclick="return false;">Buy</a>
