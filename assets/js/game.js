@@ -18,11 +18,14 @@ $(function() {
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
 		updateUI();
-		socket.emit('tradeShares', {
-			userId: 'tom',
-			stockCode: data[0].code,
-			amount: 0
-		});
+
+		if(rootScope.balance == null) {
+			socket.emit('tradeShares', {
+				userId: 'tom',
+				stockCode: data[0].code,
+				amount: 0
+			});
+		}
 	});
 
 	socket.on('updateUser', function(user) {
