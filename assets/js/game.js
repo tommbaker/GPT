@@ -14,7 +14,7 @@ Number.prototype.formatMoney = function(c, d, t) {
 
 $(function() {
 
-	if(window.location.href.indexOf("127.0.0.1")) {
+	if(window.location.href.indexOf("127.0.0.1") > -1) {
 		socket = io.connect('http://127.0.0.1:5000/');
 	} else {
 		socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
