@@ -1,0 +1,16 @@
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "0.9.13",
+    "express": "3.0.0",
+    "underscore": "1.4.3",
+    "mongodb": "1.2.7",
+    "mongoose": "3.5.3",
+    "async": "0.1.22"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}

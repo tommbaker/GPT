@@ -14,12 +14,13 @@ Number.prototype.formatMoney = function(c, d, t) {
 
 $(function() {
 
-	socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
+	socket = io.connect('127.0.0.1:5000/');
+
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
 		updateUI();
 
-		if(rootScope.balance == null) {
+		if(rootScope.balance == "") {
 			socket.emit('tradeShares', {
 				userId: 'tom',
 				stockCode: data[0].code,
@@ -51,22 +52,12 @@ function updateUI() {
 	rootScope.$apply();
 }
 
-var buyShares = _.throttle(function(code) {
-	console.log("Buy Executed");
+var tradeShares = _.throttle(function(code, amount) {
+	console.log("Trade Executed: " + amount);
 	var data = {
 		userId: 'tom',
 		stockCode: code,
-		amount: 1
-	};
-	socket.emit('tradeShares', data);
-}, 500);
-
-var sellShares = _.throttle(function(code) {
-	console.log("Sell Executed");
-	var data = {
-		userId: 'tom',
-		stockCode: code,
-		amount: -1
+		amount: amount
 	};
 	socket.emit('tradeShares', data);
 }, 500);
