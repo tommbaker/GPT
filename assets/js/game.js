@@ -14,7 +14,11 @@ Number.prototype.formatMoney = function(c, d, t) {
 
 $(function() {
 
-	socket = io.connect('127.0.0.1:5000/');
+	if(window.location.href.indexOf("127.0.0.1")) {
+		socket = io.connect('http://127.0.0.1:5000/');
+	} else {
+		socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
+	}
 
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
