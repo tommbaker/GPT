@@ -20,22 +20,23 @@ $(function() {
 		socket = io.connect('http://shrouded-escarpment-7034.herokuapp.com:80/');
 	}
 
+	socket.on('connect', function(data) {
+		socket.emit('tradeShares', {
+			userId: 'tom',
+			stockCode: '',
+			amount: 0
+		});
+	});
+
 	socket.on('stocks', function(data) {
 		rootScope.stocks = data;
 		updateUI();
-
-		if(rootScope.balance == "") {
-			socket.emit('tradeShares', {
-				userId: 'tom',
-				stockCode: data[0].code,
-				amount: 0
-			});
-		}
 	});
 
 	socket.on('updateUser', function(user) {
 		portfolio = user.portfolio;
 		rootScope.balance = user.balance.formatMoney();
+		rootScope.username = user.username;
 		updateUI();
 	});
 

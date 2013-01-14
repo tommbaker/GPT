@@ -58,7 +58,7 @@ exports.tradeShares = function (userId, stockCode, amount, callback) {
 
     // Get the stock being traded.
     var stock = __.find(stocks, function (stock) {
-        return stock.code == stockCode;
+        return stock.code == stockCode || stockCode == '';
     });
 
     // Exit if stock doesn't exist.

@@ -1,11 +1,11 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
 
-html, body { color: #211D40; font-family: 'Yanone Kaffeesatz', san-serif; background-color: #211D40; }
+html, body { color: #211D40; font-family: 'Yanone Kaffeesatz', sans-serif; background-color: #211D40; }
 .non-footer { background-color: white;}
-p, td, th { font-family: 'Droid Sans', sans-serif;}
+p, td, th, label { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 
-.content { padding: 20px; }
+.content { padding: 20px 0; }
 
 footer { color: white; text-align: center; padding-top: 25px; height: 100%; padding-bottom: 25px; }
 footer img { margin-bottom: 15px;}
@@ -27,7 +27,6 @@ footer .disclaimer { line-height: 11px; margin-top: 10px;text-transform: none;}
 .navbar .btn { margin-top: 10px; }
 */
 
-
 table.stocks { width: 100%;}
 table.stocks td, table.stocks th { text-align: left; padding: 5px 0;}
 
@@ -37,7 +36,6 @@ table.stocks td, table.stocks th { text-align: left; padding: 5px 0;}
 
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 979px) {
-	.container { width: auto;}
 	.navbar .nav-collapse li a { font-weight: normal; }
 	.nav-collapse .nav {margin-top: 15px;}
 }
@@ -45,7 +43,7 @@ table.stocks td, table.stocks th { text-align: left; padding: 5px 0;}
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	footer { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
-	.non-footer {margin-left: -20px; margin-right: -20px; }
+	.non-footer {margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
 }
 
 /* Landscape phones and down */

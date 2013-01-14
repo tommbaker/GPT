@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: content
 ---
 {% include JB/setup %}
 
@@ -8,18 +8,18 @@ Rules of the Game
 
 This is a trading game in which you can buy and sell 'shares' in a driver during a race. Payouts are given for each share you have in a driver that overtakes or completes a lap in the lead (details below).
 
-Payouts are awarded in as close to real-time as possible based on live events happening at the race.
+Payouts are awarded in as close to real-time as possible based on live events happening in the race.
 
-As in real markets, money can also be made or lost on the varying price of shares.
+As with real markets, money can also be made or lost on the varying price of shares. The markets are always open for trading (except for maintenance) and shares you have in a driver will carry over.
 
 Payouts
 -------
 
-* Each player will receive $1500 when the market opens for each race.
+* Each player will receive $1500 on the monday before each race.
 
-* $400 per share will be paid for each position gained by a driver.
+* $400 per share will be paid for each position gained by a driver (to incentivise trading before the race, $800 is paid for first lap gains).
 
-* $200 per share will be paid for each lap a driver leads.
+* $100 per share will be paid for each lap a driver leads.
 
 * (Share prices will vary between $100 - $200)
 

@@ -35,6 +35,8 @@ navigation:
   url: /game/index.html
 - text: The Rules
   url: /rules/index.html
+- text: Sign Up
+  url: /signup/index.html
 
 JB :
   version : 0.2.13
